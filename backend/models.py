@@ -6,8 +6,8 @@ import json
 import os
 # database_name = "zacademy"
 # database_path = "postgresql://{}/{}".format('localhost:5432', database_name)
-database_path = os.environ['DATABASE_URL'] = "postgresql://localhost:5432/zacademy"
-
+# = "postgresql://localhost:5432/zacademy"
+database_path = os.environ['DATABASE_URL'] = 'postgres://bohokpmskoohzh:7cffa0bd883997b0826480bb026be8e73ddf49917ab170c62298cdf97feccd0f@ec2-18-235-45-217.compute-1.amazonaws.com:5432/dcs3a64p6qksk8'
 db = SQLAlchemy()
 
 '''

@@ -1,13 +1,17 @@
 import json
+import os
 from flask import request, _request_ctx_stack, abort
 from functools import wraps
 from jose import jwt
 from urllib.request import urlopen
 
+# AUTH0_DOMAIN = os.environ['AUTH0_DOMAIN'] = 'coffehop.eu.auth0.com'
+# ALGORITHMS = os.environ['ALGORITHMS'] = ['RS256']
+# API_AUDIENCE = os.environ['API_AUDIENCE'] = 'zacademy'
 
-AUTH0_DOMAIN = 'coffehop.eu.auth0.com'
-ALGORITHMS = ['RS256']
-API_AUDIENCE = 'zacademy'
+AUTH0_DOMAIN = os.environ['AUTH0_DOMAIN'] 
+ALGORITHMS = os.environ['ALGORITHMS'] 
+API_AUDIENCE = os.environ['API_AUDIENCE'] 
 # https://coffehop.eu.auth0.com/authorize?audience=zacademy&response_type=token&client_id=lEcdDlpGzp8ohpt7JKcE8vEZRajvUlri&redirect_uri=http://localhost:5000/token
 # AuthError Exception
 '''
