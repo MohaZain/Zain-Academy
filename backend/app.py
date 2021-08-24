@@ -31,6 +31,7 @@ def create_app(test_config=None):
     @requires_auth('post:instructor')
     def add_instructor(payload):
         instructor_data = request.get_json()
+        print(instructor_data)
         try:
             instructor = Instructor(
                 name=instructor_data['name'],
